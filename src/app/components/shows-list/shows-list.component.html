@@ -1,0 +1,30 @@
+<div class="row">
+  <app-search-bar></app-search-bar>
+</div>
+<div class="row">
+
+  <table class="table col-5">
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Delete
+      </th>
+    </tr>
+
+    <tr *ngFor="let show of shows" (click)="setClicked(show)">
+      <td>
+        {{show.label}}
+      </td>
+      <td>
+        <button class="btn"> Delete </button>
+      </td>
+    </tr>
+  </table>
+
+  <div class="col-1"></div>
+
+  <app-details></app-details>
+
+</div>
